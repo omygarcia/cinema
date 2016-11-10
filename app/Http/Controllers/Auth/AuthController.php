@@ -36,8 +36,7 @@ class AuthController extends Controller
 
     public function postLogin(Request $request)
     {
-        $auth = new Auth();
-        if($auth->attempt([
+        if(Auth::attempt([
                 "mail" => $request->mail,
                 "password" => $request->password,
                 "active" => 1,

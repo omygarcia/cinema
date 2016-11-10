@@ -16,7 +16,7 @@ Route::get('contacto.html','FrontController@contacto');
 Route::get('reviews.html','FrontController@reviews');
 
 //acciones
-Route::get("index.html/{id}","FrontController@buscar");
+Route::get("index.html/{pelicula}","FrontController@buscar");
 Route::get("store","FrontController@store");
 
 

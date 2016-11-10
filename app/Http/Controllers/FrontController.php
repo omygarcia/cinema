@@ -33,13 +33,14 @@ class FrontController extends Controller
         return view("reviews",["titulo" => "Reviews"]);
     }
 
-    public function buscar($id)
+    public function buscar($pelicula)
     {
         $mensaje = "";
-        if(isset($id) && is_numeric($id))
+        if(isset($pelicula))
         {
-            if($peliculas = Movie::find($id))
-                $mensaje = "<b>Pelicula:</b> ".$peliculas['name'];
+            if($peliculas = Movie::where("name","=",$pelicula)->get())
+                //return dd($peliculas);
+                $mensaje = "<b>Pelicula:</b> ".$peliculas[0]->name;
             else
                 $mensaje = "No se encontro la pelicula";
         }

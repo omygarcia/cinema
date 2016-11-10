@@ -27,9 +27,9 @@ class UsuarioController extends Controller
                 "email"=>$request->email,
                 "password"=>sha1($request->password)
                 //"active" => 1,
-            ]/*,$request->has("remenber")*/))
+            ],$request->has("remenber")))
         {
-            return redirect()->intended($hits->redirectPath);
+            return redirect()->intended($this->redirectPath);
         }
         else
         {

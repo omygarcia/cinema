@@ -8,5 +8,5 @@ class Movie extends Model
 {
     protected $table = "tb_movie";
     protected $primaryKey = "id_movie";
-    //protected $fillable = ["","","",""];
+    //protected $fillable = ["name"];
 }

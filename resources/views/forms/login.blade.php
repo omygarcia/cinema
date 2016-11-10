@@ -22,7 +22,7 @@
 	<input type="text" name="email" placeholder="Introduce tu email" class="form-control" /><br/ >
 	<label>Password:</label><br />
 	<input type="password" name="password" placeholder="Introduce tu password" class="form-control" /><br />
-	recordarme&nbsp;<input type="checkbox" name="remenber" />
+	<input type="checkbox" name="remenber" value="true" />&nbsp;Recordarme
 	<input type="submit" value="Ingresar" class="btn btn-warning btn-block" /><br />
 	<a href="#" class="link-login">registro</a><br />
 	<a href="#" class="link-login">Olvide mi password</a><br />
