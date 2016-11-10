@@ -1,0 +1,25 @@
+#name-errors,#mail-errors,#g-recaptcha-errors,#mensaje-errors
+{
+	display:none;
+}
+
+.form-login
+{
+	color:white;
+}
+
+.form-login legend
+{
+	color:white;
+}
+
+.link-login 
+{
+	color:white;
+	text-decoration:none;
+}
+
+.link-login :hover
+{
+	color:blue;
+}
