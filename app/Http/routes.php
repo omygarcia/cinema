@@ -30,7 +30,8 @@ Route::get("admin","AdminController@index");
 
 
 //login
-Route::post("login","UsuarioController@postLogin");
+Route::post("login","LoginController@store");
+Route::get("logout","LoginController@logout");
 //social Login
 Route::get("social/{provider?}","SocialController@getSocialAuth");
 Route::get("social/callback/{provider?}","SocialController@getSocialAuthCallback");

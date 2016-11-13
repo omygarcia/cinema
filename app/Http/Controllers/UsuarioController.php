@@ -17,7 +17,10 @@ class UsuarioController extends Controller
     protected $redirectPath = '/usuario';
     protected $loginPath = '/';
 
-
+    public function __construct()
+    {
+        //$this->middleware("Auth");
+    }
 
     public function postLogin(Request $request)
     {

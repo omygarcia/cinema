@@ -11,10 +11,12 @@
         <nav class="header-nav-user">
             <ul>
                 <li>
-                    <a href="#">Usuario: José</a>
-                    <ul>
-                        <li><a href="">Cerrar Sessión</a></li> 
+                    @if(Auth::check())
+                    <a href="#">Usuario: {!! Auth::user()->name !!}</a>
+                    <ul>                        
+                        <li><a href="{{url("logout")}}">Cerrar Sessión</a></li>
                     </ul>
+                    @endif
                 </li> 
             </ul> 
         </nav>
