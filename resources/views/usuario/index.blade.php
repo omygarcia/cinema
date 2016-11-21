@@ -7,6 +7,7 @@
 	</div>
 @endif
 @section("content")
+	@include("alerts.alert-error")
 	<table class="tabla-admin">
 		<thead>
 			<tr>

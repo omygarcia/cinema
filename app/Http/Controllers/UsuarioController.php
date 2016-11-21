@@ -19,7 +19,8 @@ class UsuarioController extends Controller
 
     public function __construct()
     {
-        //$this->middleware("Auth");
+        $this->middleware("auth");
+        $this->middleware("login",["only"=>["create","edit"]]);
     }
 
     public function postLogin(Request $request)
@@ -28,7 +29,7 @@ class UsuarioController extends Controller
         exit();*/
         if(Auth::attempt([
                 "email"=>$request->email,
-                "password"=>sha1($request->password)
+                "password"=>$request->password
                 //"active" => 1,
             ],$request->has("remenber")))
         {

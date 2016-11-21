@@ -30,7 +30,7 @@
                 </ul>
             </li>
             <li><a href="{{url("usuario/create")}}">Peliculas</a></li>
-            <li><a href="{{url("usuario/create")}}">Generos</a></li>
+            <li><a href="{{url("genero/create")}}">Generos</a></li>
         </ul>
     </nav>
     <section class="section-admin">
@@ -39,6 +39,7 @@
     <!--<footer>
         <p>Todos lo derchos reservados</p>
     </footer>-->
+    
     {!! Html::script("js/jquery.min.js") !!}
     {!! Html::script("js/funciones.js") !!}
 </body>

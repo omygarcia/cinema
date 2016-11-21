@@ -22,6 +22,9 @@ Route::get("store","FrontController@store");
 
 //controlador usuarios
 Route::resource("usuario","UsuarioController");
+//controlador genero
+Route::resource("genero","GeneroController");
+Route::get("generos","GeneroController@lista");
 
 Route::resource("mail","MailController");
 

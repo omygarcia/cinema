@@ -8,4 +8,5 @@ class Genre extends Model
 {
     protected $table = "tb_genres";
     protected $primaryKey = "id_genre";
+    protected $fillable = ["genre"];
 }

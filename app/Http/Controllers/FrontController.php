@@ -10,6 +10,10 @@ use Cinema\Movie;
 
 class FrontController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth",["only"=>"usuario"]);
+    }
     /**
      * Display a listing of the resource.
      *
