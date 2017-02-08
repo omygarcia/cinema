@@ -5,6 +5,12 @@
 		<button class="btn-alert-success" onclick="ocultar();">x</button>
 	</div>
 @endif
+@if(Session::has("mensaje-error"))
+	<div id="mensaje-danger" class="alert alert-danger">
+		{{ Session::get("mensaje-error") }}
+		<button class="close" data-dismiss="alert">&times;</button>
+	</div>
+@endif
 @if(count($errors) > 0)
 	<div class="alert alert-danger">
 		<ul>
@@ -12,7 +18,7 @@
 				<li>{!! $error !!}</li>
 			@endforeach
 		</ul>
-		<button class="btn-alert-errors" onclick="ocultar();">x</button>
+		<button class="close" data-dismiss="alert">&times;</button>
 	</div>
 @endif
 <legend>Inicia Sesión</legend>

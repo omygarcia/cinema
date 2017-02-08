@@ -3,14 +3,21 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Cinema\Http\Requests;
-use Cinema\Http\Requests\LoginRequest;
-use Auth;
-use Cinema\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+use Cinema\Http\Requests;
+use Cinema\Http\Controllers\Controller;
+
+class PasswordController extends Controller
 {
+	public function getEmail()
+	{
+		return "password";
+	}
+
+	public function postEmail()
+	{
+		return "password";
+	}
     /**
      * Display a listing of the resource.
      *
@@ -37,21 +44,11 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(LoginRequest $request)
+    public function store(Request $request)
     {
-        if(Auth::attempt(["email"=>$request->email,"password"=>$request->password]))
-        {
-            return redirect("/usuario");
-        }
-        Session::flash("mensaje-error","La contraseña o el correo no son validos");
-        return redirect("/");
+        //
     }
 
-    public function logout()
-    {
-        Auth::logout();
-        return redirect("/");
-    }
     /**
      * Display the specified resource.
      *

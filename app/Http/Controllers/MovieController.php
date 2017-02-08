@@ -5,6 +5,7 @@ namespace Cinema\Http\Controllers;
 use Illuminate\Http\Request;
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
+use Cinema\Movie;
 
 class MovieController extends Controller
 {
@@ -15,7 +16,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return "index";
+        $movies = Movie::paginate(2);
+        return view("Movies.index",compact("movies"),["titulo"=>"Movies"]);
     }
 
     /**
@@ -25,7 +27,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return "create";
+        return view("Movies.create",["titulo"=>"crear"]);
     }
 
     /**

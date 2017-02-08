@@ -3,9 +3,9 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use Cinema\Http\Requests;
 use Cinema\Http\Requests\GeneroCreateRequest;
+use Illuminate\Support\Facades\Session;
 use Cinema\Http\Controllers\Controller;
 use Cinema\Genre;
 
@@ -29,6 +29,7 @@ class GeneroController extends Controller
      */
     public function index()
     {
+        //Session::flush();
         return view("genero.index",["titulo"=>"index"]);
     }
 
@@ -51,6 +52,7 @@ class GeneroController extends Controller
      */
     public function store(GeneroCreateRequest $request)
     {
+        Session::put("intentos","las sessiones en database son un exito!");
         if($request->ajax())
         {
             Genre::create([

@@ -1,13 +1,13 @@
 @extends("layouts.admin")
 @section("content")
 	@if(count($errors) > 0)
-	<div class="alert-errors">
+	<div class="alert alert-danger">
 		<ul>
 			@foreach($errors->all() as $error)
 				<li>{!! $error !!}</li>
 			@endforeach
 		</ul>
-		<button class="btn-alert-errors" onclick="ocultar();">x</button>
+		<a href="#" class="close" data-dismiss="alert">&times;</a>
 	</div>
 	@endif
 	<h2>Crear Usuario</h2>

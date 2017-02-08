@@ -25,8 +25,13 @@ Route::resource("usuario","UsuarioController");
 //controlador genero
 Route::resource("genero","GeneroController");
 Route::get("generos","GeneroController@lista");
-
+//controlador peliculas
+Route::resource("peliculas","MovieController");
+//Envio de correo
 Route::resource("mail","MailController");
+//resetear password
+Route::get("password/email","PasswordController@getEmail");
+Route::post("password/email","PasswordController@postEmail");
 
 //controlador admin
 Route::get("admin","AdminController@index");

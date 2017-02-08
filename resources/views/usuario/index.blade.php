@@ -8,7 +8,8 @@
 @endif
 @section("content")
 	@include("alerts.alert-error")
-	<table class="tabla-admin">
+	<div class="user">
+	<table class="tabla-admin table">
 		<thead>
 			<tr>
 				<th>Nombre</th>
@@ -32,6 +33,7 @@
 		</tbody>
 	</table>
 		{!! $users->render() !!} <!-- paginación -->
+	</div>
 		<!--<input type="color" />-->
 		<!--{!! DNS2D::getBarcodeHTML("www.cinema.com.mx","QRCODE") !!}-->
 		<!--<img src="data:image/png;base64,{!! DNS2D::getBarcodePNG("http://www.portafoliooegg.esy.es/", "QRCODE")!!}" alt="barcode"   />-->
