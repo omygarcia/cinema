@@ -85,4 +85,9 @@ class MovieController extends Controller
     {
         //
     }
+
+    public function restore(Request $request $id)
+    {
+
+    }
 }
